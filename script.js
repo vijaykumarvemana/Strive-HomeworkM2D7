@@ -80,11 +80,35 @@
         blogPostTrim()
 
         // EX18) Write a function and attach it to the "Newer" button, to add new Blog Post (just div and title)
-
+        
+        const addBlogPost = function() {
+            const btn = document.querySelectorAll('.blog-pagination a')[1]
+            btn.classList.remove('disabled')
+            btn.removeAttribute('href')
+            btn.addEventListener('click', function(){
+                const blogPostMain = document.querySelectorAll('.blog-main')[0]
+                const div = document.createElement('div')
+                const title = document.createElement('h2')
+                div.classList.add('blog-post')
+                title.classList.add('blog-post-title')
+                div.appendChild(title)
+                blogPostMain.appendChild('div')
+            })
+        }
+        addBlogPost()
 
 
 
         // EX19) Write a function and attach it to the "Older" button, to remove the last Blog Post
+        const removeBlogPost = function() {
+            const btn = document.querySelectorAll('.blog-pagination a')[0]
+            btn.removeAttribute('href')
+            btn.addEventListener('click', function(){
+                const blog = document.querySelectorAll('.blog-post')
+                blog[blog.length - 1].remove()
+            })
+        }
+        removeBlogPost()
 
         // EX20) Write an alert with the name of the author every time the user hover with the mouse over an author name
 
