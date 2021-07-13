@@ -81,6 +81,21 @@
 
         // EX18) Write a function and attach it to the "Newer" button, to add new Blog Post (just div and title)
 
+
+
+
         // EX19) Write a function and attach it to the "Older" button, to remove the last Blog Post
-        // EX20) Write an alert with 
+
+        // EX20) Write an alert with the name of the author every time the user hover with the mouse over an author name
+
+        const authorNameAlert = function () {
+            const author = document.querySelectorAll('main .blog-main .blog-post > h2 + p > a')
+            console.log(author)
+            for(auth of author){
+                auth.addEventListener('mouseenter', function(e){
+                    alert(e.target.innerHTML)
+                })
+            }
+        }
+        authorNameAlert()
         
