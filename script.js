@@ -32,7 +32,23 @@
         changeJumbotronbg()
 
         // EX14) Write a function to remove all the links under "Elsewhere"
+
+        const removeAllLinks = function (){
+            const elseWhere = document.querySelector('aside div:nth-child(3) h4 + ol')
+            elseWhere.innerHTML = ""
+        }
+        removeAllLinks()
+
         // EX15) Write a function to change the column size for heading in jumbotron
+        
+    
+        const colunmChangeOfJumbotron = function () {
+            const column = document.querySelector('.jumbotron .col-md-6')
+            column.classList.remove('col-md-6')
+            column.classList.add('col-md-4')
+        }
+        colunmChangeOfJumbotron()
+
         // EX16) Write a function to remove the "Search" magnifying glass icon
         // EX17) Write a function to trim just the first 50 characters in the first paragraph for each blog post
         // EX18) Write a function and attach it to the "Newer" button, to add new Blog Post (just div and title)
