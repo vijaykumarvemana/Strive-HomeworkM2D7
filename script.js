@@ -52,12 +52,35 @@
         // EX16) Write a function to remove the "Search" magnifying glass icon
         
         const removeSearchIcon = function () {
-            const searchIcon = document.querySelector('header div div:nth-child(3) a')
+            const searchIcon = document.querySelector('header > div > div:nth-child(3) a')
             searchIcon.remove('svg')
         }
         removeSearchIcon()
 
         // EX17) Write a function to trim just the first 50 characters in the first paragraph for each blog post
+        
+        const blogPostTrim = function(){
+            const blogPost = document.querySelectorAll('.blog-post p:nth-child(3)')
+            // console.log(blogPost)
+            // console.log(blogPost[0].innerHTML)
+            // const blog = blogPost[0].innerHTML
+            // console.log(blog.slice(50))
+            for(blog of blogPost){
+                console.log(blog.innerHTML)
+                blog.innerHTML = blog.innerHTML.slice(50)
+                console.log(blogPost)
+                //console.log(trim.slice(50))
+                // blogPost.trim.slice(50)
+                // trim.innerHTML = trim.slice(50)
+                // blogPost.innerHTML = result.innerHTML
+                
+            }
+            
+        }
+        blogPostTrim()
+
         // EX18) Write a function and attach it to the "Newer" button, to add new Blog Post (just div and title)
+
         // EX19) Write a function and attach it to the "Older" button, to remove the last Blog Post
-        // EX20) Write an alert with the name of the author every time the user hover with the mouse over an author name
+        // EX20) Write an alert with 
+        
