@@ -29,33 +29,52 @@
             EX9) Write a selector to target the "back to top" link     #### EXTRA Try doing it without targeting the footer element directly
             EX10) Write a selector to target the footer
         */
-      h1.display-4{
+      /*h1.display-4{
           color: blue;
+      }*/
+      .jumbotron h1{
+        color: deeppink;
       }
+
       nav a{
           text-decoration: underline;
 
-      }
+      } 
+      
       p.lead.mb-0 > a{
           background-color: chartreuse;
       }
-      nav a:nth-child(2n + 1){
+
+      main .blog-main > h3 + blog-post{
+        color: gold;
+      }
+      
+      nav > a:nth-child(2n){
           background-color: crimson;
       }
+
       div.p4 ol{
         text-decoration:underline;
       }
+
       .list-unstyled.mb-0 li{
           text-decoration: underline;
+          background-color: greenyellow !important;
       }
-      p.blog-post-meta a{
+      /* main .blog-main .blog-post:nth-child(3) > h2 + p > a {
+        color: chartreuse !important;
+      } */
+
+      main .blog-main .blog-post:nth-child(3) > h2 + p > a{
           text-decoration: underline;
       }
+
       footer{
           background-color: darkred;
       }
-       footer:last-child a{
-           text-decoration: underline;
+
+      p:last-of-type > a{
+           text-decoration: underline !important;
        }
 
     </style>
